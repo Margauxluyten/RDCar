@@ -1,0 +1,30 @@
+#logo{
+    height: 105px;
+    width: 100px;
+    object-fit: contain;
+    box-shadow: 0px 0px 10px 0px chartreuse;
+    padding: 5px;
+
+}
+
+.container-fluid{
+    height:100px;
+    position: static;
+    font-size: large;
+    box-shadow: 0px 0px 10px 0px chartreuse;
+    padding: 5px;
+}
+.nav-item{
+    padding-left: 30px;
+}
+.navbar-nav{
+   padding-left: 150px;
+}
+.nav-title{
+    font-size: xx-large;
+
+}
+
+
+
+

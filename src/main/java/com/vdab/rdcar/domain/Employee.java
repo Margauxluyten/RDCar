@@ -15,7 +15,7 @@ public class Employee {
     private String firstName;
     @Column
     private String lastName;
-
+    @Column
     private int age;
 
     private int startDate;
