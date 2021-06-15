@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+<body>
+<div th:insert="fragments/head :: nav"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="contactcontainer">
+                <form th:action="@{/contact/send}" method="post">
+                    <div class="row">
+
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" class="form-control" placeholder="Name" name="name" required>
+                        <label for="email" class="form-label">Email</label>
+                        <input class="form-control" id="email"
+                               placeholder="Email" name="email">
+                        <label for="phonenumber" class="form-label">Phone Number</label>
+                        <input id="phonenumber" class="form-control" placeholder="Number" name="phonenumber" required>
+                        <label for="message" class="form-label">Message</label>
+                        <input class="form-control" id="message"
+                               placeholder="Message" name="message" required>
+                        <div class="row" style="margin-top: 2%">
+                            <div class="col-md-4 offset-md-4">
+                                <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
+                                </button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+
+</body>
+</html>

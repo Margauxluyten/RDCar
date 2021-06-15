@@ -11,15 +11,10 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
     private String firstName;
-    @Column
     private String lastName;
-    @Column
     private int age;
-
     private int startDate;
-
     private int carCategory;
 
 }

@@ -12,9 +12,9 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @GetMapping(value = "/")
+    @GetMapping(value = "/employee")
     public String showEmployeePage(Model model) {
         model.addAttribute("allEmployees", employeeService.getEmployee());
-        return "index";
+        return "employee";
     }
 }

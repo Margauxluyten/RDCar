@@ -20,10 +20,49 @@
 .navbar-nav{
    padding-left: 150px;
 }
-.nav-title{
+.nav-title {
     font-size: xx-large;
 
 }
+
+#submitbnt{
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px chartreuse;
+    padding: 5px;
+    color: black;
+    border-color: white;
+}
+p{
+    color: fuchsia;
+    size: 50px;
+}
+.contactcontainer{
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#message{
+    align-items: center;
+    height: 60px;
+}
+.navbar-brand{
+    color: black;
+}
+.nav-link-brand{
+    color: black;
+    text-decoration: none;
+    text-decoration-color: chartreuse;
+}
+
+.nav-link-brand:hover{
+    text-decoration: none;
+    color: chartreuse;
+    opacity: 70%;
+}
+
 
 
 
