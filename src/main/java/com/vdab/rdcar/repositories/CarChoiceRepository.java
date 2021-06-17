@@ -19,6 +19,7 @@ public class CarChoiceRepository {
     }
 
     public CarChoice findCarById(long id) {
-        return entityManager.find(CarChoice.class, id);
+        return
+                entityManager.find(CarChoice.class, id);
     }
 }

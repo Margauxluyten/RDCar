@@ -21,7 +21,8 @@ public class LeasedCarRepository {
     }
 
     @Transactional(rollbackOn = Exception.class)
-    public void save(LeasedCar car) {
-        entityManager.persist(car);
+    public void save(LeasedCar newCar) {
+
+        entityManager.merge(newCar);
     }
 }

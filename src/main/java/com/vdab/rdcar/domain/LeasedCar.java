@@ -26,7 +26,8 @@ public class LeasedCar implements Serializable {
     @ManyToOne
     private Employee employee;
 
-  @OneToMany(fetch = FetchType.EAGER)
+  @OneToMany(fetch = FetchType.LAZY)
+  @JoinColumn(name = "id")
   private List<CarChoice> carChoices = new ArrayList<>();
 
 }

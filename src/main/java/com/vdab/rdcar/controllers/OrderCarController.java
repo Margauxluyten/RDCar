@@ -37,8 +37,8 @@ public class OrderCarController {
     }
 
     @PostMapping(value = "/orderingCar/{id}")
-    public String Ordering(@ModelAttribute LeasedCar car) {
-        leasedCarService.save(car);
+    public String Ordering(@ModelAttribute LeasedCar newCar) {
+        leasedCarService.save(newCar);
         return "redirect:/carpark";
     }
 

@@ -20,23 +20,23 @@
     <th scope="col">Actions</th>
   </tr>
   </thead>
-<!--  <tbody>-->
-<!--  <tr th:each="employee : ${employees}">-->
-<!--    <td th:text="${employee.getId}"></td>-->
-<!--    <td th:text="${employee.getFirstName}"></td>-->
-<!--    <td th:text="${employee.getLastName}"></td>-->
-<!--    <td th:text="${employee.getCarCategory}"></td>-->
-<!--    <td th:text="${employee.orderCar.getId}"></td>-->
-<!--    <td th:text="${employee.orderCar.getBrand}"></td>-->
-<!--    <td th:text="${employee.orderCar.getCat}"></td>-->
-<!--    <td th:text="${employee.orderCar.getModel}"></td>-->
-<!--    <td th:text="${employee.orderCar.getPack}"></td>-->
-<!--    <td>-->
-<!--      <a th:href="@{editEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">edit</span></a>-->
-<!--      <a th:href="@{removeEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">delete</span></a>-->
-<!--    </td>-->
-<!--  </tr>-->
-<!--  </tbody>-->
+  <tbody>
+  <tr th:each=" : ${employees}">
+    <td th:text="${employee.getId}"></td>
+    <td th:text="${employee.getFirstName}"></td>
+    <td th:text="${employee.getLastName}"></td>
+    <td th:text="${employee.getCarCategory}"></td>
+    <td th:text="${employee.orderCar.getId}"></td>
+    <td th:text="${employee.orderCar.getBrand}"></td>
+    <td th:text="${employee.orderCar.getCat}"></td>
+    <td th:text="${employee.orderCar.getModel}"></td>
+    <td th:text="${employee.orderCar.getPack}"></td>
+    <td>
+      <a th:href="@{editEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">edit</span></a>
+      <a th:href="@{removeEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">delete</span></a>
+    </td>
+  </tr>
+  </tbody>
 </table>
 
 </body>
