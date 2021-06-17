@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+
+<body>
+<div th:insert="fragments/head :: nav"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="employeecontainer">
+                <form method="post" th:action="@{/editedEmployee/{id}(id=${editemployee.id})}" th:object="${editemployee}">
+                    <div class="row">
+
+                        <label for="firstname" class="form-label">First Name</label>
+                        <input th:value="${editemployee.firstName}" class="form-control" id="firstname"
+                               placeholder="First Name" name="firstName">
+
+                        <label for="lastname" class="form-label">Last Name</label>
+                        <input th:value="${editemployee.lastName}" class="form-control" id="lastname"
+                               placeholder="Last Name" name="lastName">
+
+                        <label for="age" class="form-label">Age</label>
+                        <input th:value="${editemployee.age}" class="form-control" id="age"
+                               placeholder="Age" name="age">
+
+                      <label for="startdate" class="form-label">Date of Employment</label>
+                      <input th:value="${editemployee.startDate}" class="form-control" id="startdate"  type="date" th:field="*{startDate}"
+                             placeholder="DDMMYY" name="startDate">
+
+                        <label for="carCategory" class="form-label">Car Category</label>
+                        <input th:value="${editemployee.carCategory}" class="form-control" id="carCategory"
+                               placeholder="Car Category" name="carCategory">
+
+                    </div>
+
+                    <div class="col-md-4 offset-md-4">
+                        <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

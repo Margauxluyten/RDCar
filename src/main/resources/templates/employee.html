@@ -6,6 +6,8 @@
 <body>
 <div th:insert="fragments/head :: nav"></div>
 
+
+
 <table class="table">
     <thead>
     <tr>
@@ -15,18 +17,23 @@
         <th scope="col">Age</th>
         <th scope="col">Date of Employment</th>
         <th scope="col">Car Category</th>
+        <th scope="col">Actions</th>
+        <th scope="col"><a th:href="@{addEmployee}"><span class="material-icons">add</span></a></th>
     </tr>
     </thead>
     <tbody>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+    <tr th:each="employee : ${allEmployees}">
+        <td th:text="${employee.getId}"></td>
+        <td th:text="${employee.getFirstName}"></td>
+        <td th:text="${employee.getLastName}"></td>
+        <td th:text="${employee.getAge}"></td>
+        <td th:text="${employee.getStartDate}"></td>
+        <td th:text="${employee.getCarCategory}"></td>
+        <td>
+            <a th:href="@{editEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">edit</span></a>
+            <a th:href="@{removeEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">delete</span></a>
+        </td>
     </tr>
-
     </tbody>
 </table>
 

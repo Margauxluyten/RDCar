@@ -43,6 +43,13 @@ p{
     display: inline-block;
     vertical-align: middle;
 }
+.employeecontainer{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 #message{
     align-items: center;
@@ -61,6 +68,11 @@ p{
     text-decoration: none;
     color: chartreuse;
     opacity: 70%;
+}
+.table{
+   width: 50%;
+    margin-left: 500px;
+    
 }
 
 

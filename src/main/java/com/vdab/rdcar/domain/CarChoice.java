@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "order_car")
 @Data
-public class OrderCar {
+public class CarChoice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -1,22 +1,22 @@
 package com.vdab.rdcar.controllers;
 
-import com.vdab.rdcar.services.CarService;
+import com.vdab.rdcar.services.LeasedCarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class CarController {
+public class CarParkController {
 
     @Autowired
-    private CarService carService;
+    private LeasedCarService leasedCarService;
 
-    @GetMapping(value = "/car")
-    public String showCarPage(Model model) {
-        model.addAttribute("allCar", carService.getCar());
-        return "car";
+    @GetMapping(value = "/carpark")
+    public String showCarParkPage(){
+        return "carpark";
     }
+
 
 
 }

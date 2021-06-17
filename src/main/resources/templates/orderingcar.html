@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+<body>
+<div th:insert="fragments/head :: nav"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="contactcontainer">
+                <form method="post" th:action="@{/orderingCar/{id}(id=${carChoice.id})}" th:object="${leasedCar}">
+                    <div class="row">
+
+                        <label for="id" class="form-label">Car Id</label>
+                        <input id="id" class="form-control" placeholder="Car Id" name="id" required th:value="${carChoice.id}">
+
+                        <label for="brand" class="form-label">Brand</label>
+                        <input id="brand" class="form-control" placeholder="Brand" name="brand" required  th:value="${carChoice.brand}">
+
+                        <label for="model" class="form-label">Model</label>
+                        <input class="form-control" id="model"
+                               placeholder="Model" name="model"  th:value="${carChoice.model}">
+
+                        <label for="cat" class="form-label">Category</label>
+                        <input class="form-control" id="cat"
+                               placeholder="Category" name="cat"  th:value="${carChoice.cat}">
+
+                        <label for="color" class="form-label">Color</label>
+                        <input class="form-control" id="color"
+                               placeholder="Color" name="color" >
+
+                        <label for="employee">Choose the Employee Id</label>
+                        <select class="form-control" id="employee" th:field="*{employee}">
+                            <option th:each="employee : ${employees}" th:text="${employee.getFirstName()} + ${employee.getLastName()}"
+                                    th:value="${{employee}}"> option
+                            </option>
+                        </select>
+
+
+
+
+                        <div class="row" style="margin-top: 2%">
+                            <div class="col-md-4 offset-md-4">
+                                <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
