@@ -11,29 +11,29 @@
     <th scope="col">ID</th>
     <th scope="col">First Name</th>
     <th scope="col">Last Name</th>
+    <th scope="col">Employee Id</th>
     <th scope="col">Car Category</th>
-    <th scope="col">Registration Date</th>
-    <th scope="col">Mileage</th>
     <th scope="col">Brand</th>
     <th scope="col">Model</th>
-    <th scope="col">Pack</th>
+    <th scope="col">Registration Date</th>
+    <th scope="col">Mileage</th>
     <th scope="col">Actions</th>
   </tr>
   </thead>
   <tbody>
-  <tr th:each=" : ${employees}">
-    <td th:text="${employee.getId}"></td>
-    <td th:text="${employee.getFirstName}"></td>
-    <td th:text="${employee.getLastName}"></td>
-    <td th:text="${employee.getCarCategory}"></td>
-    <td th:text="${employee.orderCar.getId}"></td>
-    <td th:text="${employee.orderCar.getBrand}"></td>
-    <td th:text="${employee.orderCar.getCat}"></td>
-    <td th:text="${employee.orderCar.getModel}"></td>
-    <td th:text="${employee.orderCar.getPack}"></td>
+  <tr th:each="leasedCar : ${allLeasedCars}">
+    <td th:text="${leasedCar.getId}"></td>
+    <td th:text="${leasedCar.getEmployee().getFirstName()}"></td>
+    <td th:text="${leasedCar.getEmployee().getLastName()}"></td>
+    <td th:text="${leasedCar.getEmployee().getId()}"></td>
+    <td th:text="${leasedCar.getEmployee().getCarCategory()}"></td>
+    <td th:text="${leasedCar.getBrand()}"></td>
+    <td th:text="${leasedCar.getModel()}"></td>
+    <td th:text="${leasedCar.getRegistrationDate()}"></td>
+    <td th:text="${leasedCar.getMileage()}"></td>
     <td>
-      <a th:href="@{editEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">edit</span></a>
-      <a th:href="@{removeEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">delete</span></a>
+      <a th:href="@{editLeasedCar/{id}(id=${leasedCar.getId()})}"><span class="material-icons">edit</span></a>
+      <a th:href="@{removeLeasedCar/{id}(id=${leasedCar.getId()})}"><span class="material-icons">delete</span></a>
     </td>
   </tr>
   </tbody>

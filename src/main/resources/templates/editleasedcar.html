@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+</head>
+
+<body>
+<div th:insert="fragments/head :: nav"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="employeecontainer">
+                <form method="post" th:action="@{/editedLeasedCar/{id}(id=${editLeasedCar.id})}" th:object="${editLeasedCar}">
+                    <input type="date" th:if="${showRegistrationDate == true}" th:field="*{registrationDate}">
+
+                    <div class="row">
+
+                        <label for="mileage" class="form-label">Please update your mileage</label>
+                        <input th:value="${editLeasedCar.mileage}" class="form-control" id="mileage"
+                               placeholder="Mileage" name="mileage">
+                    </div>
+
+                    <div class="col-md-4 offset-md-4">
+                        <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

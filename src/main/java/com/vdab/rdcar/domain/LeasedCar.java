@@ -1,19 +1,24 @@
 package com.vdab.rdcar.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
 public class LeasedCar implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     private String brand;
 
@@ -21,13 +26,15 @@ public class LeasedCar implements Serializable {
 
     private Long mileage;
 
-    private Long registrationDate;
+    private String color;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate registrationDate;
 
     @ManyToOne
     private Employee employee;
 
-  @OneToMany(fetch = FetchType.LAZY)
-  @JoinColumn(name = "id")
-  private List<CarChoice> carChoices = new ArrayList<>();
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<CarChoice> carChoices;
 
 }

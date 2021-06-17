@@ -31,7 +31,6 @@ public class EmployeeRepository {
     }
     @Transactional
     public void updateEmployee(Employee employee) {
-
         entityManager.merge(employee);
     }
     @Transactional
