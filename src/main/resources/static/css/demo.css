@@ -5,6 +5,7 @@
     box-shadow: 0px 0px 10px 0px chartreuse;
     padding: 5px;
 
+
 }
 
 .container-fluid{
@@ -13,15 +14,22 @@
     font-size: large;
     box-shadow: 0px 0px 10px 0px chartreuse;
     padding: 5px;
+    margin: 0 auto;
+}
+.bg-light{
+    background-color: transparent!important;
 }
 .nav-item{
     padding-left: 30px;
+    font-family: Arial;
 }
 .navbar-nav{
    padding-left: 150px;
+    font-family: Arial;
 }
 .nav-title {
     font-size: xx-large;
+    font-family: Arial;
 
 }
 
@@ -34,21 +42,29 @@
 }
 p{
     color: fuchsia;
-    size: 50px;
+    font-size: 100px;
+}
+.container{
+    width: 100%;
+    font-size: 20px;
 }
 .contactcontainer{
-    width: 75%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    vertical-align: middle;
+    margin: 0 auto;
+    width: 750px;
+    font-size: 12px;
+    font-family: Arial;
 }
 .employeecontainer{
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    vertical-align: middle;
+    margin: 0 auto;
+    width: 750px;
+    font-size: 12px;
+    font-family: Arial;
+}
+.leasedcarcontainer{
+    margin: 0 auto;
+    width: 500px;
+    font-size: 12px;
+    font-family: Arial;
 }
 
 #message{
@@ -69,11 +85,126 @@ p{
     color: chartreuse;
     opacity: 70%;
 }
-.table{
-   width: 50%;
-    margin-left: 500px;
-    
+.table {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 0 auto;
+
+
 }
+
+.tablecontainer{
+   justify-content: center;
+    width: 100%;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background: url("https://i.ibb.co/KrF8NXD/sky.jpg") no-repeat;
+    background-position: center;
+    background-size: auto;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0px;
+}
+.highway{
+    height: 200px;
+    width: 500%;
+    display: block;
+    background: url("https://i.ibb.co/vQdyMTW/Table-with-clound-and-sky-near-the-river-at-moutain-background.jpg" );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: highway 5s linear infinite;
+}
+@keyframes highway{
+    100%{
+        transform: translateX(-3400px);
+    }
+}
+.city{
+    height: 250px;
+    width: 500%;
+    /*background: url("https://i.ibb.co/vXrcHzG/city.png");*/
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+
+}
+@keyframes city{
+    100%{
+        transform: translateX(-1400px);
+    }
+}
+.car{
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+    color: chartreuse;
+}
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+.wheel{
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.wheel img{
+    width: 73px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+
+}
+.backwheel{
+    left: -165px;
+    position: absolute;
+}
+.frontwheel{
+    left: 80px;
+    position: absolute;
+}
+@keyframes wheel{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
 
 
 

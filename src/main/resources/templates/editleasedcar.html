@@ -15,17 +15,21 @@
             <br>
             <br>
             <br>
-            <div class="employeecontainer">
+            <div class="leasedcarcontainer">
                 <form method="post" th:action="@{/editedLeasedCar/{id}(id=${editLeasedCar.id})}" th:object="${editLeasedCar}">
-                    <input type="date" th:if="${showRegistrationDate == true}" th:field="*{registrationDate}">
-
+                    <label for="registrationdate" th:if="${showRegistrationDate == true}" class="form-label">Please enter your Registration Date:    </label>
+                    <br>
+                    <input  type="date" th:if="${showRegistrationDate == true}" th:field="*{registrationDate}"
+                           id="registrationdate" placeholder="registrationdate" name="registrationdate">
+                    <br>
+                    <br>
                     <div class="row">
 
-                        <label for="mileage" class="form-label">Please update your mileage</label>
+                        <label for="mileage" class="form-label">Please update your mileage: </label>
                         <input th:value="${editLeasedCar.mileage}" class="form-control" id="mileage"
                                placeholder="Mileage" name="mileage">
                     </div>
-
+                    <br>
                     <div class="col-md-4 offset-md-4">
                         <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
                         </button>

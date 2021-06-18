@@ -38,7 +38,7 @@
 
                         <label for="employee">Choose the Employee Id</label>
                         <select class="form-control" id="employee" th:field="*{employee}">
-                            <option th:each="employee : ${employees}" th:text="${employee.getFirstName()} + ${employee.getLastName()}"
+                            <option th:each="employee : ${employees}" th:text="${employee.getFirstName()} + ' ' + ${employee.getLastName()}"
                                     th:value="${{employee}}"> option
                             </option>
                         </select>

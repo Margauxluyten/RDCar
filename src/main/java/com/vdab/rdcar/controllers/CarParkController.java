@@ -37,7 +37,6 @@ public class CarParkController {
     @PostMapping(value = "/editedLeasedCar/{id}")
     public String editedLeasedCarPage(@ModelAttribute LeasedCar leasedCar ){
         LeasedCar leasedCarFromDb = leasedCarService.findLeasedCarById(leasedCar.getId());
-
         leasedCarFromDb.setMileage(leasedCar.getMileage());
         leasedCarFromDb.setRegistrationDate(leasedCar.getRegistrationDate());
         leasedCarService.updateLeasedCar(leasedCarFromDb);

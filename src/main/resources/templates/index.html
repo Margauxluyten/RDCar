@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head th:replace="fragments/head :: head">
 
 </head>
-<body>
-<div th:insert="fragments/head :: nav"></div>
 
-<p>Home page</p>
+<body>
+
+<div class="hero">
+    <div th:insert="fragments/head :: nav"></div>
+    <div class="highway"></div>
+    <div class="city"></div>
+    <div class="car">
+        <img src="https://i.ibb.co/sK5GKp2/car.png" alt="car" border="0">
+    </div>
+    <div class="wheel">
+        <img src="https://i.ibb.co/TLCFGZP/wheel.png" alt="wheel" border="0" class="backwheel" >
+        <img src="https://i.ibb.co/TLCFGZP/wheel.png" alt="wheel" border="0" class="frontwheel" >
+    </div>
+</div>
 </body>
 </html>
