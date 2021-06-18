@@ -17,9 +17,9 @@
             <br>
             <div class="leasedcarcontainer">
                 <form method="post" th:action="@{/editedLeasedCar/{id}(id=${editLeasedCar.id})}" th:object="${editLeasedCar}">
-                    <label for="registrationdate" th:if="${showRegistrationDate == true}" class="form-label">Please enter your Registration Date:    </label>
+                    <label for="registrationdate" th:if="${showRegistrationDate == true}" class="form-label">Please enter your Registration Date: </label>
                     <br>
-                    <input  type="date" th:if="${showRegistrationDate == true}" th:field="*{registrationDate}"
+                    <input  type="date" th:if="${showRegistrationDate == true}" th:value="${editLeasedCar.registrationDate}" th:field="*{registrationDate}"
                            id="registrationdate" placeholder="registrationdate" name="registrationdate">
                     <br>
                     <br>
@@ -27,7 +27,7 @@
 
                         <label for="mileage" class="form-label">Please update your mileage: </label>
                         <input th:value="${editLeasedCar.mileage}" class="form-control" id="mileage"
-                               placeholder="Mileage" name="mileage">
+                               placeholder="Mileage" name="mileage" type="number">
                     </div>
                     <br>
                     <div class="col-md-4 offset-md-4">
