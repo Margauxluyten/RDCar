@@ -15,6 +15,7 @@
         <th scope="col">Last Name</th>
         <th scope="col">Age</th>
         <th scope="col">Date of Employment</th>
+        <th scope="col">Employment Duration</th>
         <th scope="col">Car Category</th>
         <th scope="col">Actions</th>
         <th scope="col"><a th:href="@{addEmployee}"><span class="material-icons">add</span></a></th>
@@ -27,6 +28,7 @@
         <td th:text="${employee.getLastName}"></td>
         <td th:text="${employee.getAge}"></td>
         <td th:text="${employee.getStartDate}"></td>
+        <td th:text="${employee.getYearsEmployment()}"></td>
         <td th:text="${employee.getCarCategory}"></td>
         <td>
             <a th:href="@{editEmployee/{id}(id=${employee.getId()})}"><span class="material-icons">edit</span></a>

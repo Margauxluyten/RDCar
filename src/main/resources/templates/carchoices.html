@@ -150,15 +150,41 @@
     </section>
 </main>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+
+            </div>
+            <br>
+            <div class="contactcontainer">
+                <form method="post" th:action="@{/car/}" th:object="${employee}" >
+                    <div class="row">
+
+                        <label for="employee">Choose your name:</label>
+                        <select class="form-control" id="employee" th:field="*{id}" >
+                            <option th:each="employee : ${employees}" th:text="${employee.getFirstName()} + ' ' + ${employee.getLastName()}"
+                                    th:value="${employee.id}"> option
+                            </option>
+                        </select>
 
 
+                        <div class="row" style="margin-top: 2%">
+                            <div class="col-md-4 offset-md-4">
+                                <button id="submitbnt" type="submit" class="form-control btn btn-primary">Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-
+<br>
+<br>
+<br>
 
 
 <div class="tablecontainer">

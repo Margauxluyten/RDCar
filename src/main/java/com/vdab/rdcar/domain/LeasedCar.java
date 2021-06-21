@@ -9,6 +9,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,15 +27,34 @@ public class LeasedCar implements Serializable {
 
     private Long mileage;
 
-    private String color;
+    @OneToMany(fetch = FetchType.EAGER)
+    private List<Colour> colours= new ArrayList<>();
+
+
+    private Long ageOfCar;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate registrationDate;
+
+    public Long getAgeOfLeasedCar(){
+        if (registrationDate != null) {
+            LocalDate today = LocalDate.now();
+            this.ageOfCar = ChronoUnit.YEARS.between(this.registrationDate, today);
+            return ageOfCar;
+        }else{
+            return ageOfCar;
+        }
+    }
 
     @ManyToOne
     private Employee employee;
 
     @OneToMany(fetch = FetchType.EAGER)
     private List<CarChoice> carChoices;
+
+
+    public List<Colour> getColours() {
+        return colours;
+    }
 
 }

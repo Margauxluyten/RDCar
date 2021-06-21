@@ -15,7 +15,9 @@
     <th scope="col">Car Category</th>
     <th scope="col">Brand</th>
     <th scope="col">Model</th>
+    <th scope="col">Colour</th>
     <th scope="col">Registration Date</th>
+    <th scope="col">Car age</th>
     <th scope="col">Mileage</th>
     <th scope="col" style="width:100px">Actions</th>
   </tr>
@@ -29,7 +31,9 @@
     <td th:text="${leasedCar.getEmployee().getCarCategory()}"></td>
     <td th:text="${leasedCar.getBrand()}"></td>
     <td th:text="${leasedCar.getModel()}"></td>
+    <td th:text="${leasedCar.getColour()}"></td>
     <td th:text="${leasedCar.getRegistrationDate()}"></td>
+    <td th:text="${leasedCar.getAgeOfLeasedCar()}"></td>
     <td th:text="${leasedCar.getMileage()}"></td>
     <td>
       <a th:href="@{editLeasedCar/{id}(id=${leasedCar.getId()})}"><span class="material-icons">edit</span></a>
