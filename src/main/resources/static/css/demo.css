@@ -40,6 +40,15 @@
     font-family: Arial;
 
 }
+.footer{
+    text-align: center;
+    color: darkgray;
+    font-size: small;
+    position:static;
+    left:0;
+    bottom: 0;
+    width: 100%;
+}
 
 #peopleimg{
     height: 50%;
@@ -60,10 +69,6 @@
     padding: 5px;
     color: black;
     border-color: white;
-}
-p{
-    color: black;
-    font-size: 100px;
 }
 .container{
     width: 100%;
