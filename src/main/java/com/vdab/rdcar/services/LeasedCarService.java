@@ -15,6 +15,7 @@ public class LeasedCarService {
 
 
     public void save(LeasedCar car) {
+
         leasedCarRepository.save(car);
     }
 

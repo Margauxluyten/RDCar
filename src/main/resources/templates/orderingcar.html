@@ -19,31 +19,29 @@
                     <div class="row">
 
                         <label for="id" class="form-label">Car Id</label>
-                        <input id="id" class="form-control" placeholder="Car Id" name="id" required th:value="${carChoice.id}">
+                        <input id="id" class="form-control" placeholder="Car Id" name="id" required
+                               th:value="${carChoice.id}">
 
                         <label for="brand" class="form-label">Brand</label>
-                        <input id="brand" class="form-control" placeholder="Brand" name="brand" required  th:value="${carChoice.brand}">
+                        <input id="brand" class="form-control" placeholder="Brand" name="brand" required
+                               th:value="${carChoice.brand}">
 
                         <label for="model" class="form-label">Model</label>
                         <input class="form-control" id="model"
-                               placeholder="Model" name="model"  th:value="${carChoice.model}">
+                               placeholder="Model" name="model" th:value="${carChoice.model}">
 
                         <label for="cat" class="form-label">Category</label>
                         <input class="form-control" id="cat"
-                               placeholder="Category" name="cat"  th:value="${carChoice.cat}">
+                               placeholder="Category" name="cat" th:value="${carChoice.cat}">
 
                         <label for="colour">Select Colour</label>
-                        <select class="form-control" id="colour" th:field="*{colours}">
-                            <option th:each="colour : ${colours}" th:text="${colour.getColourName()}"
-                                    th:value="${colour.getId()}"> option
-                            </option>
-
-                        <label for="employee">Choose the Employee Id</label>
-                        <select class="form-control" id="employee" th:field="*{employee}">
-                            <option th:each="employee : ${employees}" th:text="${employee.getFirstName()} + ' ' + ${employee.getLastName()}"
-                                    th:value="${{employee}}"> option
+                        <select class="form-control" id="colour" th:field="*{colour}">
+                            <option th:each="colour : ${colours}" th:text="${colour}"
+                                    th:value="${colour}"> option
                             </option>
                         </select>
+                        <label for="employee">For employee</label>
+                        <input class="form-control" name="employee"  th:value="${employee.getId()}" id="employee" readonly>
 
                         <div class="row" style="margin-top: 2%">
                             <div class="col-md-4 offset-md-4">

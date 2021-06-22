@@ -28,7 +28,9 @@ public class Employee {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate startDate;
     private String carCategory;
+    @Transient
     private Long yearsEmployment;
+
     public Long getYearsEmployment() {
         if (startDate != null) {
             LocalDate today = LocalDate.now();

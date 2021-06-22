@@ -27,10 +27,10 @@ public class LeasedCar implements Serializable {
 
     private Long mileage;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<Colour> colours= new ArrayList<>();
+    @Enumerated(EnumType.STRING)
+    private Colour colour;
 
-
+    @Transient
     private Long ageOfCar;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -52,9 +52,5 @@ public class LeasedCar implements Serializable {
     @OneToMany(fetch = FetchType.EAGER)
     private List<CarChoice> carChoices;
 
-
-    public List<Colour> getColours() {
-        return colours;
-    }
 
 }

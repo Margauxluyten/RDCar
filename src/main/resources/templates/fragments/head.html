@@ -3,6 +3,7 @@
 <head th:fragment="head">
     <meta charset="UTF-8">
     <title>nav</title>
+    <base href="/">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -50,6 +51,34 @@
             </div>
         </div>
     </div>
+</div>
+
+<div th:fragment="footer">
+    <footer>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="footer">
+                <ul class="navbar-footer">
+                    <li class="footer-item">
+                        <a th:href="@{/employee}" class="footer-link" href="#">Employees</a>
+                    </li>
+                    <li class="footer-item">
+                        <a th:href="@{/car}" class="footer-link" href="#">Cars</a>
+                    </li>
+                    <li class="footer-item">
+                        <a th:href="@{/carpark}" class="footer-link" href="#" >Carpark</a>
+                    </li>
+                    <li class="footer-item">
+                        <a th:href="@{/contact}" class="footer-link" href="#" >Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </footer>
 </div>
 
 </body>

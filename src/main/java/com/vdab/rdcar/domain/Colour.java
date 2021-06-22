@@ -1,17 +1,5 @@
 package com.vdab.rdcar.domain;
 
-import lombok.Data;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-@Data
-public class Colour {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String colourName;
+public enum Colour {
+    BLUE,BLACK,WHITE,SILVER,GREY;
 }
