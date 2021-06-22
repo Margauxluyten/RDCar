@@ -21,23 +21,23 @@
 
                         <label for="firstname" class="form-label">First Name</label>
                         <input th:value="${editemployee.firstName}" class="form-control" id="firstname"
-                               placeholder="First Name" name="firstName">
+                               placeholder="First Name" name="firstName" required>
 
                         <label for="lastname" class="form-label">Last Name</label>
                         <input th:value="${editemployee.lastName}" class="form-control" id="lastname"
-                               placeholder="Last Name" name="lastName">
+                               placeholder="Last Name" name="lastName" required>
 
                         <label for="age" class="form-label">Age</label>
                         <input th:value="${editemployee.age}" class="form-control" id="age"
-                               placeholder="Age" name="age">
+                               placeholder="Age" name="age" required>
 
                       <label for="startdate" class="form-label">Date of Employment</label>
                       <input th:value="${editemployee.startDate}" class="form-control" id="startdate"  type="date" th:field="*{startDate}"
-                             placeholder="DDMMYY" name="startDate">
+                             placeholder="DDMMYY" name="startDate" required>
 
                         <label for="carCategory" class="form-label">Car Category</label>
                         <input th:value="${editemployee.carCategory}" class="form-control" id="carCategory"
-                               placeholder="Car Category" name="carCategory">
+                               placeholder="Car Category" name="carCategory" required>
                     </div>
                     <br>
                     <div class="col-md-4 offset-md-4">
@@ -50,7 +50,7 @@
         </div>
     </div>
 </div>
-
+<br>
 <div th:insert="fragments/head :: footer"></div>
 
 </body>

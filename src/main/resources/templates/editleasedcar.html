@@ -20,14 +20,14 @@
                     <label for="registrationdate" th:hidden="${showRegistrationDate == false}" class="form-label">Please enter your Registration Date: </label>
                     <br>
                     <input  type="date" th:hidden="${showRegistrationDate == false}" th:value="${editLeasedCar.registrationDate}" th:field="*{registrationDate}"
-                           id="registrationdate" placeholder="registrationdate" name="registrationdate">
+                           id="registrationdate" placeholder="registrationdate" name="registrationdate" required>
                     <br>
                     <br>
                     <div class="row">
 
                         <label for="mileage" class="form-label">Please update your mileage: </label>
                         <input th:value="${editLeasedCar.mileage}" class="form-control" id="mileage"
-                               placeholder="Mileage" name="mileage" type="number">
+                               placeholder="Mileage" name="mileage" type="number" required>
                     </div>
                     <br>
                     <div class="col-md-4 offset-md-4">

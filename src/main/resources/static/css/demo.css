@@ -48,6 +48,10 @@
     bottom: 0;
     width: 100%;
 }
+#city-icon{
+    font-size: 12px;
+}
+
 
 #peopleimg{
     height: 50%;

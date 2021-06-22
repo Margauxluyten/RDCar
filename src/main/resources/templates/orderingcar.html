@@ -19,25 +19,25 @@
                     <div class="row">
 
                         <label for="id" class="form-label">Car Id</label>
-                        <input id="id" class="form-control" placeholder="Car Id" name="id" required
-                               th:value="${carChoice.id}">
+                        <input id="id" class="form-control" placeholder="Car Id" name="id"
+                               th:value="${carChoice.id}" required>
 
                         <label for="brand" class="form-label">Brand</label>
-                        <input id="brand" class="form-control" placeholder="Brand" name="brand" required
-                               th:value="${carChoice.brand}">
+                        <input id="brand" class="form-control" placeholder="Brand" name="brand"
+                               th:value="${carChoice.brand}"required>
 
                         <label for="model" class="form-label">Model</label>
                         <input class="form-control" id="model"
-                               placeholder="Model" name="model" th:value="${carChoice.model}">
+                               placeholder="Model" name="model" th:value="${carChoice.model}" required>
 
                         <label for="cat" class="form-label">Category</label>
                         <input class="form-control" id="cat"
-                               placeholder="Category" name="cat" th:value="${carChoice.cat}">
+                               placeholder="Category" name="cat" th:value="${carChoice.cat}" required>
 
                         <label for="colour">Select Colour</label>
                         <select class="form-control" id="colour" th:field="*{colour}">
                             <option th:each="colour : ${colours}" th:text="${colour}"
-                                    th:value="${colour}"> option
+                                    th:value="${colour}" > option
                             </option>
                         </select>
                         <label for="employee">For employee</label>
@@ -55,7 +55,7 @@
         </div>
     </div>
 </div>
-
+<br>
 <div th:insert="fragments/head :: footer"></div>
 
 </body>
